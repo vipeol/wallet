@@ -1,3 +1,4 @@
+                    <div class="overflow-x-auto">
                         <table class="min-w-full bg-white text-sm">
                             <thead class="bg-gray-200">
                                 {{-- O cabeçalho agora tem TODAS as colunas bi-partidas --}}
@@ -164,3 +165,4 @@
                                 </tr>
                             </tfoot>
                         </table>
+                    </div>
