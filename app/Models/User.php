@@ -6,6 +6,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Filament\Panel;
+use Filament\Models\Contracts\FilamentUser;
 
 class User extends Authenticatable
 {
@@ -63,5 +65,15 @@ class User extends Authenticatable
     public function dividends()
     {
         return $this->hasManyThrough(Dividend::class, Asset::class);
+    }
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+        // Por enquanto, vamos permitir o acesso a todos os usuários registrados.
+        // No futuro, você pode adicionar uma lógica mais complexa aqui, como:
+        // return $this->is_admin === true;
+        // ou
+        // return str_ends_with($this->email, '@suaempresa.com');
+        return true;
     }
 }
