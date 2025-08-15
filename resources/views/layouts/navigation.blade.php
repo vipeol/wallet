@@ -82,18 +82,18 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-nav-link :href="route('portfolios.index')" :active="request()->routeIs(['portfolios.index', 'portfolios.create', 'portfolios.edit'])">
+            <x-responsive-nav-link :href="route('portfolios.index')" :active="request()->routeIs(['portfolios.index', 'portfolios.create', 'portfolios.edit'])">
                 {{ __('Carteiras') }}
-            </x-nav-link>                    
-            <x-nav-link :href="route('assets.index')" :active="request()->routeIs('assets.*')">
+            </x-responsive-nav-link>                    
+            <x-responsive-nav-link :href="route('assets.index')" :active="request()->routeIs('assets.*')">
                 {{ __('Meus Ativos') }}
-            </x-nav-link>                    
-            <x-nav-link :href="route('portfolios.snapshot')" :active="request()->routeIs('portfolios.snapshot')">
+            </x-responsive-nav-link>                    
+            <x-responsive-nav-link :href="route('portfolios.snapshot')" :active="request()->routeIs('portfolios.snapshot')">
                 {{ __('Posição na Data') }}
-            </x-nav-link>
-            <x-nav-link :href="route('trades.closed')" :active="request()->routeIs('trades.closed')">
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('trades.closed')" :active="request()->routeIs('trades.closed')">
                 {{ __('Trades Encerrados') }}
-            </x-nav-link>                    
+            </x-responsive-nav-link>                    
         </div>
 
         <!-- Responsive Settings Options -->
